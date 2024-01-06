@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Project Title</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        *{
+            font-family: 'Montserrat', sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,18,36,1) 5%, rgba(119,0,255,1) 100%, rgba(0,145,123,1) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 20px;   
+        }
+        header h1{
+            text-shadow: 4px 4px black;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        h1 {
+            color: white;
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+        }
+        
+        .project-details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .project-details div{
+            width: 100%;
+        }
+        .project-details div img{
+            width: inherit;
+            object-fit: contain;
+        }
+        .project-details h2,div{
+            text-align: center;
+        }
+
+        .olay{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo{
+            width: 30px;
+            height: 30px;
+        }
+
+        footer {
+            background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,18,36,1) 1%, rgba(119,0,255,1) 100%, rgba(0,145,123,1) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .git{
+            text-align: center;
+            font-size: 20px;
+            text-decoration: none;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="data-ana">Data Analysis</h1>
+        <h2>About the Project</h2>
+        <p>Embark on my "Data Analysis Using Python" journey at RV University, delving into the "IBM HR Analytics Employee Attrition & Performance" dataset. Uncover insights to enhance workplace satisfaction, reduce attrition, and boost performance. Gratitude to mentors Shobana Padmanabhan and Achala Hegde, and my stellar team Aditya Kumar, Sri Krishna R Hebbar, and Aditi Gopinath.</p>
+    </header>
+
+    <div class="container">
+        <div class="project-details">
+            <h2>Preview</h2>
+            <div>
+                <img src="pxweb.png" alt="">
+            </div>
+            <h2>Git Hub link</h2>
+            <div>
+                <a class="git" href="https://vinay-r-s.github.io/test.github.io/">Pixel gallery</a>
+            </div>
+            <br><br><br>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Pixel Gallery
+    </footer>
+
+    <script>
+        const textElement = document.querySelector("#data-ana");
+        const text = textElement.textContent;
+
+        let index = 0;
+        let speed = 30;
+
+        function writeText() {
+            document.querySelector("#data-ana").innerHTML = text.slice(0, index);
+            index++;
+            if(index <= text.length) {
+                setTimeout(writeText, speed);
+                }
+            }
+        writeText();
+    </script>
+</body>
+</html>
